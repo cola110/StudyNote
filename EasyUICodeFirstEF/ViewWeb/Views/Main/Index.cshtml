@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "系统后台框架";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统后台框架</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <link href="../../EasyUI/themes/default/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../../EasyUI/themes/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../EasyUI/demo/demo.css" rel="stylesheet" type="text/css" />
+    <script src="../../EasyUI/jquery.min.js" type="text/javascript"></script>
+    <script src="../../EasyUI/jquery.easyui.min.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .fl {
+            float: left;
+            display: inline;
+        }
+
+        .fr {
+            float: right;
+            display: inline;
+        }
+
+        .leftcol, .rightcol {
+            width: 30%;
+            height: 24px;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 400;
+            color: red;
+        }
+
+        .main {
+            height: 24px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .content {
+            margin-right: 30px;
+        }
+
+        .cl {
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="easyui-layout" style="width:100%;height:100%; margin:0px;">
+        <div data-options="region:'north'" style="height: 55px; background-image: url(/Content/themes/base/images/topbg.png); background-position: right bottom; ">
+            <div style="text-align: left; float: left; height: 100%; width: 60%; margin-left:4px; font-size:xx-large; font-weight:600;  ">
+                武装风暴系统后台界面
+            </div>
+
+            <div style="float:right; margin-top:4px; margin-left:8px; margin-right:8px;">
+                <a href="/Account/Login"> <strong>退出</strong> </a>
+            </div>
+            <div style="float:right; margin-top:4px; margin-left:8px;">
+                <a href="#"> <strong>密码修改 |</strong></a>
+            </div>
+            <div style="float:right; margin-top:4px; margin-left:8px;">
+                <a href="#"><strong>设置 |</strong></a>
+            </div>
+        </div>
+        <div data-options="region:'south'" style="height:25px;">
+            <div class="content">
+                <div class="fl leftcol"></div>
+                <div class="fr rightcol">当前用户：@ViewBag.UserName  &nbsp;&nbsp; &nbsp; &nbsp;   所属角色：@ViewBag.RoleName</div>
+                <div class="main">Copyright &copy; 2015 http//:wangweimutou.cnblogs.com. All Rights Reserved.</div>
+                <div class="cl"></div>
+            </div>
+
+        </div>
+
+        <div data-options="region:'west',split:true" title="系统主菜单" style="width:168px;">
+            <div class="easyui-accordion" data-options="fit:true,border:false">
+                <ul class="easyui-tree" id="txt"
+                    data-options="url:'../../data/tree_data.json',method:'get',animate:true,lines:true"></ul>
+
+            </div>
+        </div>
+
+        <div data-options="region:'center'" borer="false">
+            <div class="easyui-tabs" data-options="fit:true,border:false,plain:true" id="tt">
+                <div title="系统主页" style="padding:10px">
+                    @Html.Partial("Test")
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $('#txt').tree({
+                onClick: function (node) {
+                    if (node.treelevel != 2)  //如果点击的不是父节点
+                    {
+                        //alert(node.text + node.treelevel);
+                        addTab(node.text, node.url, node.iconCls);
+                    }
+                }
+            });
+        })
+
+        function addTab(title, url, iconCls) {
+            if ($('#tt').tabs('exists', title)) {
+                $('#tt').tabs('select', title);
+            } else {
+                var content = '<iframe scrolling="auto" frameborder="0"  src="' + url + '" style="width:99.5%;height:99.5%;"></iframe>';
+                $('#tt').tabs('add', {
+                    title: title,
+                    content: content,
+                    closable: true,
+                    iconCls: iconCls
+                });
+            }
+        }
+    </script>
+</body>
+</html>

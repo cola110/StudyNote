@@ -1,0 +1,40 @@
+﻿@{ ViewBag.Title = "登录"; }
+<link href="~/Content/style.css" rel="stylesheet" />
+<style>
+	.login>div {
+		width: 400px;
+	}
+	
+	.easyui-panel>div {
+		padding: 10px 60px 20px 60px;
+	}
+</style>
+<script type="text/javascript">
+	function clearForm() {
+		$("#ff").form("clear");
+	}
+</script>
+<div class="login">
+	<div class="easyui-panel" title="登录界面">
+		<div>
+			<form action="/Main/Index" method="post" id="ff">
+				<div class="fitem">
+					<label>用户名：</label><input id="UserName" name="UserName" class="easyui-validatebox" required="true" value="admin" />
+				</div>
+				<div style="height:20px;"></div>
+				<div class="fitem">
+					<label>密&nbsp;&nbsp;码：</label>
+					<input id="UserPwd" name="UserPwd" class="easyui-validatebox" required="true" type="password" value=123/>
+				</div>
+				<div style="height:20px"></div>
+				<div style="text-align: center;padding: 5px;">
+					<input type="submit" class="easyui-linkbutton" value="登录" />
+					<input type="button" class="easyui-linkbutton" value="清除" onclick="clearForm()" />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div style="text-align: center;margin-top: 20px;font-size: 14px;font-weight: 400;">
+	(c) Copyright 2016 Administrator. All Rights Reserved. 
+</div>
