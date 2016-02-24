@@ -1,0 +1,35 @@
+﻿[{
+    "id":1,
+    "text":"系统权限管理",
+    "iconCls":"icon-large-chart",
+    "children":[{
+        "text":"用户管理",
+        "iconCls":"icon-large-picture",
+        "url":"/System/UserList"
+    },{
+        "text":"角色管理",
+        "iconCls":"icon-large-clipart",
+        "url":"/System/RoleList"
+    },{
+        "text":"菜单管理",
+        "iconCls":"icon-large-shapes",
+        "url":"/System/MenuList"
+    
+    },{
+        "text":"权限设置",
+          "iconCls":"icon-large-smartart",
+        "url":"/System/PermitList"
+    }]
+},
+{
+    "id":2,
+    "text":"数据管理",
+    "iconCls":"icon-save",
+    "children":[{
+        "text":"数据录入",
+        "url":"System/Test2"
+    },{
+        "text":"Test",
+        "url":"System/Test2"
+    }]
+}]
