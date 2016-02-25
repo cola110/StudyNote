@@ -43,20 +43,20 @@ namespace T4
         //    return declare.ToString();
         //}
 
-        ///// <summary>参数转换成sql变量申明,主要是调试和记录日志用</summary>
-        //public static string SqlParameterWrapperToString(List<SqlParameter> parList)
-        //{
-        //    StringBuilder declare = new StringBuilder();
-        //    foreach (SqlParameter par in parList)
-        //    {
-        //        string suffix = "";
-        //        if (par.SqlDbType == SqlDbType.NVarChar || par.SqlDbType == SqlDbType.VarChar)
-        //            suffix = "(" + par.Value.ToString().Length * 2 + ")";
-        //        declare.AppendLine("declare @" + par.ParameterName.TrimStart('@') + " " + par.SqlDbType + suffix + " ='"
-        //                           + par.Value + "';");
-        //    }
-        //    return declare.ToString();
-        //}
+        /// <summary>参数转换成sql变量申明,主要是调试和记录日志用</summary>
+        public static string SqlParameterWrapperToString(List<SqlParameter> parList)
+        {
+            StringBuilder declare = new StringBuilder();
+            foreach (SqlParameter par in parList)
+            {
+                string suffix = "";
+                if (par.SqlDbType == SqlDbType.NVarChar || par.SqlDbType == SqlDbType.VarChar)
+                    suffix = "(" + par.Value.ToString().Length * 2 + ")";
+                declare.AppendLine("declare @" + par.ParameterName.TrimStart('@') + " " + par.SqlDbType + suffix + " ='"
+                                   + par.Value + "';");
+            }
+            return declare.ToString();
+        }
         #endregion
 
         #region GetWhereSql

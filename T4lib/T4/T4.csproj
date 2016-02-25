@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="DataPage.cs" />
     <Compile Include="ITableBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
