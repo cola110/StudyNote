@@ -1,10 +1,10 @@
 #说明
-        ├─cn.T4.codeOut
+        ├─cn.T4.codeOut                 T4使用的外部生成方法
         │  ├─bin
         │  │  ├─Debug
         │  │  └─Release
         │  └─Properties
-        ├─T4
+        ├─T4                            T4生成实体
         │  ├─bin
         │  │  ├─Debug
         │  │  └─Release
@@ -13,13 +13,7 @@
         │  │  └─Debug
         │  │      └─TempPE
         │  └─Properties
-        ├─TC.Flight.T4Library
-        │  ├─bin
-        │  ├─obj
-        │  │  └─Debug
-        │  │      └─TempPE
-        │  └─Properties
-        └─UnitTestProject1
+        └─UnitTestProject1              T4外部生成dll单元测试模块
             ├─bin
             │  ├─Debug
             │  └─Release
