@@ -56,7 +56,8 @@
     <Compile Include="device\TagClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="push\PushClient.cs" />
-    <Compile Include="report\BaseReportClient.cs" />
+    <Compile Include="report\ReportClient.cs" />
+    <Compile Include="schedule\ScheduleClient.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

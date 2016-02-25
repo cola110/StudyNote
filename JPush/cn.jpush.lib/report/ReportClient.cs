@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cn.jpush.lib.push
+namespace cn.jpush.lib.report
 {
-    public class PushClient : Base
+    public class ReportClient : Base
     {
         #region 构造函数
-        public PushClient()
+        public ReportClient()
+            : base()
         {
             this._reqeustUrl = GetRequestUrl();
         }
@@ -20,15 +21,14 @@ namespace cn.jpush.lib.push
         /// 构造函数
         /// </summary>
         /// <param name="tokenId">设备Id--极光的deviceId</param>
-        public PushClient(string appKey, string masterSecret)
+        public ReportClient(string appKey, string masterSecret)
         {
             this.AppKey = appKey;
             this.MasterSecret = masterSecret;
             this.Authorization = GetAuthorization();
             this.AuthorHeader = GetHeaderAuthor();
-            RequestUrl = string.Format("{0}/v3/push", GetRequestUrl());
+            RequestUrl = string.Format("{0}/v3/received", GetRequestUrl());
         }
-
         #endregion
 
         #region 请求地址
@@ -53,20 +53,20 @@ namespace cn.jpush.lib.push
         /// <returns></returns>
         private string GetRequestUrl()
         {
-            return ConfigurationManager.AppSettings["pushUrl"] ?? "";
+            return ConfigurationManager.AppSettings["reportUrl"] ?? "";
         }
         #endregion
 
-        #region 验证是否可以发送极光推送消息
+        #region 去获取该 msg_id 的送达统计数据
         /// <summary>
-        /// 验证是否可以发送极光推送消息
+        /// 去获取该 msg_id 的送达统计数据
         /// </summary>
         /// <returns></returns>
-        public string ValidataPush()
+        public string GetRecevicedCount(List<string> msg_ids)
         {
-            string url = "https://api.jpush.cn/v3/push/validate";
+            string url = string.Format("{0}?msg_ids={1}", RequestUrl, string.Join(",", msg_ids));
 
-            string returnStr = HttpClient.HttpPost(url, null, AuthorHeader);
+            string returnStr = HttpClient.HttpGet(url, AuthorHeader);
 
             return returnStr;
         }

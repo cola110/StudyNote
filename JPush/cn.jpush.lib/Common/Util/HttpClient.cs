@@ -134,7 +134,7 @@ namespace cn.jpush.lib.Common.Util
         /// <param name="timeOut">超时时间</param>
         /// <param name="header">设置请求头</param>
         /// <returns></returns>
-        public static string GetHttpResponse(string url, string data, int timeOut, NameValueCollection header = null, string method = "GET")
+        private static string GetHttpResponse(string url, string data, int timeOut, NameValueCollection header = null, string method = "GET")
         {
             string result = null;
             string error = null;
