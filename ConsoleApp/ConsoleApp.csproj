@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spider\HttpClient.cs" />
     <Compile Include="_WebClient\AppTestDown.cs" />
     <Compile Include="_WebClient\Html_Parse.cs" />
     <Compile Include="_WebClient\Html_Outputer.cs" />

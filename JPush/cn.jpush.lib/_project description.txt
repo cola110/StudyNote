@@ -1,4 +1,17 @@
-�ļ���˵������������sdk����
-	
+﻿文件夹说明：极光推送sdk开发
+├─bin
+│  ├─Debug
+│  └─Release
+├─Common
+│  ├─Entities
+│  └─Util
+├─device			极光推送：设备信息相关操作
+├─obj
+│  └─Debug
+│      └─TempPE
+├─Properties
+├─push				极光推送：发送信息消息【验证和发送】
+├─report			极光推送：发送到达统计信息
+└─schedule			极光推送：任务调度--由于不经常使用，所以没有实现，如果需要可以按照上面的逻辑实现。
 
 
