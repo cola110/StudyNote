@@ -33,6 +33,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>..\ExtDLL\redis\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\ExtDLL\redis\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\ExtDLL\redis\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite">
+      <HintPath>..\ExtDLL\redis\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\ExtDLL\redis\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Server">
+      <HintPath>..\ExtDLL\redis\ServiceStack.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\ExtDLL\redis\ServiceStack.Text.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +65,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="redis\Entity\Blog.cs" />
+    <Compile Include="redis\Entity\BlogPost.cs" />
+    <Compile Include="redis\Entity\User.cs" />
+    <Compile Include="redis\RedisDemo.cs" />
+    <Compile Include="redis\RedisDemoTest.cs" />
+    <Compile Include="redis\RedisInPractise.cs" />
     <Compile Include="spider\HttpClient.cs" />
     <Compile Include="_WebClient\AppTestDown.cs" />
     <Compile Include="_WebClient\Html_Parse.cs" />
