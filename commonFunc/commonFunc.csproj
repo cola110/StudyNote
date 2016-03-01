@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data_pattern\Singleton.cs" />
     <Compile Include="data_structure\DecisionTree.cs" />
     <Compile Include="ExDeal\ExceptionDeal.cs" />
     <Compile Include="FileOperation\FileOpMain.cs" />
