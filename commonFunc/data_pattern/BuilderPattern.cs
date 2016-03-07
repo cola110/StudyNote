@@ -9,5 +9,6 @@ namespace commonFunc.data_pattern
 {
     public class BuilderPattern
     {
+
     }
 }
