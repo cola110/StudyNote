@@ -9,6 +9,7 @@ using commonFunc._gdi;
 using commonFunc.ExDeal;
 using commonFunc.FileOperation;
 using commonFunc.Reflection;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 
@@ -22,7 +23,9 @@ namespace commonFunc
             // IOSample.FileAndDirectoryOp();  // 目录操作方法
             // new ExceptionDeal().DevideAct();
             // new ReflectTest().TestReflect();
-            new HoverWarter().TestTextToImage();
+            // new HoverWarter().TestTextToImage();
+            var rest = int.Parse("exit");
+            Console.WriteLine(rest);
         }
     }
 }

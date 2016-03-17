@@ -27,7 +27,7 @@ namespace commonFunc.data_pattern
 
         public class ChineseBonus : Bonus
         {
-            public double Calulate()
+            public override double Calulate()
             {
                 return Constant.BASE_SALARY * 0.1;
             }
@@ -35,7 +35,7 @@ namespace commonFunc.data_pattern
 
         public class ChineseTax : Tax
         {
-            public double Calulate()
+            public override double Calulate()
             {
                 return (Constant.BASE_SALARY + (Constant.BASE_SALARY * 0.1)) * 0.4;
             }
@@ -52,7 +52,7 @@ namespace commonFunc.data_pattern
 
         public class AmericanBonus : Bonus
         {
-            public double Calulate()
+            public override double Calulate()
             {
                 return Constant.BASE_SALARY * 0.1;
             }
@@ -60,7 +60,7 @@ namespace commonFunc.data_pattern
 
         public class AmericanTax : Tax
         {
-            public double Calulate()
+            public override double Calulate()
             {
                 return (Constant.BASE_SALARY + (Constant.BASE_SALARY * 0.1)) * 0.4;
             }
@@ -93,12 +93,12 @@ namespace commonFunc.data_pattern
         using System.Reflection;
         public class ChineseFactory : AbstractFactory
         {
-            public Tax CreateTax()
+            public override Tax CreateTax()
             {
                 return new ChineseTax();
             }
 
-            public Bonus CreateBonus()
+            public override Bonus CreateBonus()
             {
                 return new ChineseBonus();
             }
@@ -106,12 +106,12 @@ namespace commonFunc.data_pattern
 
         public class AmericanFactory : AbstractFactory
         {
-            public Tax CreateTax()
+            public override Tax CreateTax()
             {
                 return new AmericanTax();
             }
 
-            public Bonus CreateBonus()
+            public override Bonus CreateBonus()
             {
                 return new AmericanBonus();
             }
