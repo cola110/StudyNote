@@ -30,12 +30,30 @@
     <ClInclude Include="bo1-1.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="c2-1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main1-1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="bo1-1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="algo1-3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="algo1-4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="algo1-1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="algo1-2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bo2-1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -12,4 +12,8 @@ Status Put(Triplet T, int i, ElemType e);
 
 Status IsAscending(Triplet T);
 
+Status IsDescending(Triplet T);
+
 Status Max(Triplet T, ElemType &e);
+
+Status Min(Triplet T, ElemType &e);
