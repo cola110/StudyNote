@@ -1,4 +1,5 @@
 #include "c1.h"
+typedef int ElemType;
 #include "c1-1.h"
 
 Status InitTriplet(Triplet &T, ElemType v1, ElemType v2, ElemType v3)
