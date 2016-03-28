@@ -1,2 +1,4 @@
 _netrc
-	文件所在目录：C:\Users\Administrator
+	鏂囦欢鎵�鍦ㄧ洰褰曪細C:\Users\Administrator
+	
+	test
