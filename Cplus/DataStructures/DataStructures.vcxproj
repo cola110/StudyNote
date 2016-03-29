@@ -80,9 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bo1-1.h" />
+    <ClInclude Include="bo2-1.h" />
     <ClInclude Include="c1-1.h" />
     <ClInclude Include="c1.h" />
     <ClInclude Include="c2-1.h" />
+    <ClInclude Include="func2-3.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +92,13 @@
     <ClCompile Include="algo1-2.cpp" />
     <ClCompile Include="algo1-3.cpp" />
     <ClCompile Include="algo1-4.cpp" />
+    <ClCompile Include="algo2-1.cpp" />
+    <ClCompile Include="algo2-2.cpp" />
     <ClCompile Include="bo1-1.cpp" />
     <ClCompile Include="bo2-1.cpp" />
+    <ClCompile Include="func2-3.cpp" />
     <ClCompile Include="main1-1.cpp" />
+    <ClCompile Include="main2-1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DataStructures.rc" />

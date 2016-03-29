@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <sys/timeb.h>
 
-int main()
+int algo1_2_main()
 {
 	timeb t1, t2;
 	long t;
