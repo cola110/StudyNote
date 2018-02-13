@@ -14,9 +14,10 @@ namespace JPushEntry
         public static void Main(string[] args)
         {
             // new JPushKey().TestMethod();
-
-            var ApiKey = JPushKey.GetAppKey();
-            var APIMasterSecret = JPushKey.GetMasterSecret();
+            //var ApiKey = JPushKey.GetAppKey();
+            //var APIMasterSecret = JPushKey.GetMasterSecret();
+            var ApiKey = "";// JPushKey.GetAppKey();
+            var APIMasterSecret = "";// JPushKey.GetMasterSecret();
 
             JPushClient client = new JPushClient(ApiKey, APIMasterSecret);
 

@@ -54,6 +54,12 @@
   <ItemGroup>
     <Content Include="_project description.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cn.jpush.lib\cn.jpush.lib.csproj">
+      <Project>{bde8e9ab-6cfc-45c1-8282-8e793f3f241c}</Project>
+      <Name>cn.jpush.lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
