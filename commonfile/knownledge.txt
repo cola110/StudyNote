@@ -1,4 +1,0 @@
-_netrc
-	文件所在目录：C:\Users\Administrator
-	
-	test
