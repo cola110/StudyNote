@@ -1,7 +1,0 @@
-sae git代码管理使用说明(git bash)
-从sae中拉去代码：git clone -o sae https://git.sinacloud.com/ztzone/ E:/github/sae
-	最后一个参数是：代码在本地存储位置
-
-
-参考URL：http://cloudbbs.org/forum.php?mod=viewthread&tid=37351
-		 http://www.yiibai.com/git/git_clone.html
